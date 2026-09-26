@@ -5,12 +5,12 @@
 
 ## 下载
 
-到 [**Releases**](https://github.com/GA17-LHY/dsh-blender-helper/releases) 下载 `Blender创作辅助插件-v0.1.0-win.zip`
+到 [**Releases**](https://github.com/GA17-LHY/dsh-blender-helper/releases) 下载 `Blender-helper-plugin-v0.1.0-win.zip`
 （1292 个文件，解压后约 12.4 MB）。
 
 ```powershell
 # 校验完整性
-Get-FileHash .\Blender创作辅助插件-v0.1.0-win.zip -Algorithm SHA256
+Get-FileHash .\Blender-helper-plugin-v0.1.0-win.zip -Algorithm SHA256
 # 应为 AB8C584595B42CA13A20A8C336345467A61525C1C2606ADEB3BB7FAB82B92A19
 ```
 
