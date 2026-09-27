@@ -5,14 +5,18 @@
 
 ## 下载
 
-到 [**Releases**](https://github.com/GA17-LHY/dsh-blender-helper/releases) 下载 `Blender-helper-plugin-v0.1.0-win.zip`
-（1292 个文件，解压后约 12.4 MB）。
+到 [**Releases**](https://github.com/GA17-LHY/dsh-blender-helper/releases) 下载**最新版**（当前 **v0.1.1**）：
+
+- 文件：`Blender-helper-plugin-v0.1.1-win.zip`
+- SHA256：`c51294f86359705c0dc9ad327e772dfc74e95769633346e1a7b73e4344b8186a`
 
 ```powershell
-# 校验完整性
-Get-FileHash .\Blender-helper-plugin-v0.1.0-win.zip -Algorithm SHA256
-# 应为 AB8C584595B42CA13A20A8C336345467A61525C1C2606ADEB3BB7FAB82B92A19
+Get-FileHash .\Blender-helper-plugin-v0.1.1-win.zip -Algorithm SHA256
 ```
+
+> ⚠️ **不要使用 v0.1.0**（已撤回）：那版的三个安装脚本是 UTF-8 **无 BOM**，在中文 Windows 上会被
+> Windows PowerShell 5.1 按 ANSI(GBK) 读，中文注释撑坏引号而**根本无法运行**；`安装到DSH.ps1`
+> 还可能写坏你的 `cordis.patch.yml`。v0.1.1 已修复。
 
 ## 包里有什么（两半，都要装）
 
@@ -51,4 +55,6 @@ Blender 侧：`cd <解压目录>\blender侧插件` → `powershell -ExecutionPol
   在 `dsh侧插件\` 里跑 `pnpm install` 重新解析依赖，再重启 dsh。
 - Blender 4.2~5.x 应当可用（manifest 声明最低 4.2.0），但**只在 5.0.1 实测过**。
 - 服务只监听 `127.0.0.1`，不对外开放端口。
+- 三个安装脚本都是 **UTF-8 带 BOM**（这是必须的：脚本含中文注释，而 PowerShell 5.1 在中文系统上
+  会把无 BOM 的 UTF-8 按 GBK 读；删掉 BOM 会让脚本无法运行）。
 - 发布前已对包内内容做过个人信息扫描；包内不含发布者的用户名、账号或本机绝对路径。
