@@ -5,18 +5,18 @@
 
 ## 下载
 
-到 [**Releases**](https://github.com/GA17-LHY/dsh-blender-helper/releases) 下载**最新版**（当前 **v0.1.2**）：
+到 [**Releases**](https://github.com/GA17-LHY/dsh-blender-helper/releases) 下载**最新版**（当前 **v0.1.3**）：
 
-- 文件：`Blender-helper-plugin-v0.1.2-win.zip`
-- SHA256：`2482e84aed4ad8b040b485e305b59e8a13262560edcf32d9bebc9b8c82432020`
+- 文件：`Blender-helper-plugin-v0.1.3-win.zip`
+- SHA256：`02abab83b2eaba36992b7bf5ae71042a2c0a70626d4f0bfcca84d3523a9b9ffd`
 
 ```powershell
-Get-FileHash .\Blender-helper-plugin-v0.1.2-win.zip -Algorithm SHA256
+Get-FileHash .\Blender-helper-plugin-v0.1.3-win.zip -Algorithm SHA256
 ```
 
 > ⚠️ **不要使用 v0.1.0**（已撤回）：那版的三个安装脚本是 UTF-8 **无 BOM**，在中文 Windows 上会被
 > Windows PowerShell 5.1 按 ANSI(GBK) 读，中文注释撑坏引号而**根本无法运行**；`安装到DSH.ps1`
-> 还可能写坏你的 `cordis.patch.yml`。v0.1.2 已修复。
+> 还可能写坏你的 `cordis.patch.yml`。v0.1.3 已修复。
 
 ## 包里有什么（两半，都要装）
 
